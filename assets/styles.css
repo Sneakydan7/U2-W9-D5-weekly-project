@@ -34,7 +34,7 @@ body {
   transform: skewX(-15deg);
   z-index: 1;
 }
-.screen img {
+.interface {
   position: absolute;
   top: 0;
   left: 0;
@@ -43,7 +43,91 @@ body {
   object-fit: cover;
   opacity: 0;
   transition: 0.5s;
+  z-index: 1;
+  background-image: url(./imgs/branch.png);
 }
-.screen:hover img {
+.interface:hover {
   opacity: 1;
+}
+
+nav button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+}
+nav button img {
+  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+}
+
+nav button img:hover {
+  scale: 1.1;
+  filter: brightness(110%);
+}
+p {
+  margin: 0;
+  padding: 0 0 10px 0;
+  line-height: 20px;
+}
+.span4 {
+  width: 60px;
+  float: left;
+  margin: 0 8px 10px 8px;
+}
+
+.tel {
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  border: 1px solid #9e9e9e;
+  border-radius: 0px;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+
+.num-pad {
+  padding-left: 30px;
+}
+
+.num {
+  border: 1px solid #9e9e9e;
+  -webkit-border-radius: 999px;
+  border-radius: 999px;
+  -moz-border-radius: 999px;
+  height: 60px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+.num:hover {
+  background-color: #9e9e9e;
+  color: #fff;
+  transition-property: background-color 0.2s linear 0s;
+}
+.txt {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 15px;
+  font-family: "Lato", sans-serif;
+  line-height: 30px;
+  color: #333;
+}
+.small {
+  font-size: 15px;
+}
+
+.btn {
+  font-weight: bold;
+
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 1px;
+}
+.btn:hover {
+  transition-property: background-color 0.2s linear 0s;
+}
+
+.active {
+  color: #3498db;
 }

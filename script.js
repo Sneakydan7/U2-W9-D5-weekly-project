@@ -33,3 +33,59 @@ console.log(FirstUser.numberCarica, FirstUser.numberChiamate);
 FirstUser.minutiDurata(6);
 console.log(FirstUser.getNumeroChiamate());
 console.log(FirstUser.number404());
+FirstUser.azzeraChiamate();
+console.log(FirstUser.numberChiamate);
+console.log(FirstUser.getNumeroChiamate());
+// ESERCIZIO FINITO //
+// EXTRA //
+var phoneBtn = document.getElementById("phone-btn");
+phoneBtn.addEventListener("click", function () {
+    var home = document.getElementById("homepage");
+    home.classList.add("d-none");
+    var phoneScrn = document.getElementById("phone-page");
+    phoneScrn.classList.remove("d-none");
+});
+var key = document.querySelectorAll(".num");
+console.log(key);
+var _loop_1 = function (i) {
+    key[i].addEventListener("click", function () {
+        var numBox = document.getElementById("telNumber");
+        numBox.value += key[i].innerText;
+    });
+};
+for (var i = 0; i < key.length; i++) {
+    _loop_1(i);
+}
+var callBtn = document.getElementById("call");
+callBtn.addEventListener("click", function () {
+    var numBox = document.getElementById("telNumber");
+    if (numBox.value === "404") {
+        alert("Hai un credito residuo di ".concat(SecondUser.number404(), " $"));
+        numBox.value = "";
+    }
+    else if (numBox.value === "3313833534") {
+        SecondUser.minutiDurata(2);
+        alert("Stai chiamando Daniele Cagnoni...");
+        alert("Chiamata terminata : Durata 2 minuti");
+        numBox.value = "";
+    }
+    else if (numBox.value === "11925") {
+        SecondUser.unaRicarica(25);
+        alert("hai ricaricato il credito di 25 $");
+        numBox.value = "";
+    }
+    else if (numBox.value === "11950") {
+        SecondUser.unaRicarica(50);
+        alert("hai ricaricato il credito di 25 $");
+        numBox.value = "";
+    }
+    else if (numBox.value === "111") {
+        alert("".concat(SecondUser.getNumeroChiamate()));
+        numBox.value = "";
+    }
+    else if (numBox.value === "000") {
+        SecondUser.azzeraChiamate();
+        alert("Chiamate Cancellate");
+        numBox.value = "";
+    }
+});

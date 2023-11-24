@@ -47,3 +47,67 @@ FirstUser.minutiDurata(6);
 
 console.log(FirstUser.getNumeroChiamate());
 console.log(FirstUser.number404());
+FirstUser.azzeraChiamate();
+console.log(FirstUser.numberChiamate);
+console.log(FirstUser.getNumeroChiamate());
+
+// ESERCIZIO FINITO //
+
+// EXTRA //
+
+let phoneBtn: any = document.getElementById("phone-btn");
+
+phoneBtn.addEventListener("click", function () {
+  let home: any = document.getElementById("homepage");
+  home.classList.add("d-none");
+  let phoneScrn: any = document.getElementById("phone-page");
+  phoneScrn.classList.remove("d-none");
+});
+
+let key: any = document.querySelectorAll(".num");
+console.log(key);
+
+for (let i = 0; i < key.length; i++) {
+  key[i].addEventListener(
+    "click",
+
+    function () {
+      let numBox: any = document.getElementById(
+        "telNumber"
+      ) as HTMLInputElement;
+
+      numBox.value += key[i].innerText;
+    }
+  );
+}
+
+let callBtn: any = document.getElementById("call");
+
+callBtn.addEventListener("click", function () {
+  let numBox: any = document.getElementById("telNumber");
+
+  if (numBox.value === "404") {
+    alert(`Hai un credito residuo di ${SecondUser.number404()} $`);
+    numBox.value = "";
+  } else if (numBox.value === "3313833534") {
+    SecondUser.minutiDurata(2);
+    alert(`Stai chiamando Daniele Cagnoni...`);
+    alert(`Chiamata terminata : Durata 2 minuti`);
+    numBox.value = "";
+  } else if (numBox.value === "11925") {
+    SecondUser.unaRicarica(25);
+    alert(`hai ricaricato il credito di 25 $`);
+    numBox.value = "";
+  } else if (numBox.value === "11950") {
+    SecondUser.unaRicarica(50);
+    alert(`hai ricaricato il credito di 25 $`);
+    numBox.value = "";
+  } else if (numBox.value === "111") {
+    alert(`${SecondUser.getNumeroChiamate()}`);
+    numBox.value = "";
+  } else if (numBox.value === "000") {
+    SecondUser.azzeraChiamate();
+    alert(`Chiamate Cancellate`);
+    numBox.value = "";
+  }
+});
