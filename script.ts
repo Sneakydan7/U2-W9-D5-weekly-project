@@ -65,7 +65,6 @@ phoneBtn.addEventListener("click", function () {
 });
 
 let key: any = document.querySelectorAll(".num");
-console.log(key);
 
 for (let i = 0; i < key.length; i++) {
   key[i].addEventListener(

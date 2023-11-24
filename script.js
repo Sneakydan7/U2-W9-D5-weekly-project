@@ -46,7 +46,6 @@ phoneBtn.addEventListener("click", function () {
     phoneScrn.classList.remove("d-none");
 });
 var key = document.querySelectorAll(".num");
-console.log(key);
 var _loop_1 = function (i) {
     key[i].addEventListener("click", function () {
         var numBox = document.getElementById("telNumber");
