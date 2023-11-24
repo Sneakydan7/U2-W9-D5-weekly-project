@@ -36,3 +36,7 @@ class User implements Smartphone {
     this.numberChiamate = 0;
   }
 }
+
+let FirstUser = new User(0, 0);
+let SecondUser = new User(0, 0);
+let ThirdUser = new User(0, 0);

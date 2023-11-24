@@ -25,3 +25,6 @@ var User = /** @class */ (function () {
     };
     return User;
 }());
+var FirstUser = new User(0, 0);
+var SecondUser = new User(0, 0);
+var ThirdUser = new User(0, 0);
