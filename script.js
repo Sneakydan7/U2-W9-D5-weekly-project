@@ -15,10 +15,10 @@ var User = /** @class */ (function () {
         this.numberChiamate++;
     };
     User.prototype.number404 = function () {
-        return this.numberCarica;
+        return this.numberCarica.toFixed(2);
     };
     User.prototype.getNumeroChiamate = function () {
-        return this.numberChiamate;
+        return "".concat(this.numberChiamate, " \u00E8 il numero di chiamate effettuate");
     };
     User.prototype.azzeraChiamate = function () {
         this.numberChiamate = 0;
@@ -28,3 +28,8 @@ var User = /** @class */ (function () {
 var FirstUser = new User(0, 0);
 var SecondUser = new User(0, 0);
 var ThirdUser = new User(0, 0);
+FirstUser.unaRicarica(50), FirstUser.minutiDurata(3);
+console.log(FirstUser.numberCarica, FirstUser.numberChiamate);
+FirstUser.minutiDurata(6);
+console.log(FirstUser.getNumeroChiamate());
+console.log(FirstUser.number404());

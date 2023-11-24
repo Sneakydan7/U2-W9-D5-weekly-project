@@ -25,11 +25,11 @@ class User implements Smartphone {
   }
 
   public number404() {
-    return this.numberCarica;
+    return this.numberCarica.toFixed(2);
   }
 
   public getNumeroChiamate() {
-    return this.numberChiamate;
+    return `${this.numberChiamate} è il numero di chiamate effettuate`;
   }
 
   public azzeraChiamate(): void {
@@ -40,3 +40,10 @@ class User implements Smartphone {
 let FirstUser = new User(0, 0);
 let SecondUser = new User(0, 0);
 let ThirdUser = new User(0, 0);
+
+FirstUser.unaRicarica(50), FirstUser.minutiDurata(3);
+console.log(FirstUser.numberCarica, FirstUser.numberChiamate);
+FirstUser.minutiDurata(6);
+
+console.log(FirstUser.getNumeroChiamate());
+console.log(FirstUser.number404());
