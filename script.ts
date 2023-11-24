@@ -93,13 +93,11 @@ callBtn.addEventListener("click", function () {
     alert(`Stai chiamando Daniele Cagnoni...`);
     alert(`Chiamata terminata : Durata 2 minuti`);
     numBox.value = "";
-  } else if (numBox.value === "11925") {
-    SecondUser.unaRicarica(25);
-    alert(`hai ricaricato il credito di 25 $`);
-    numBox.value = "";
-  } else if (numBox.value === "11950") {
-    SecondUser.unaRicarica(50);
-    alert(`hai ricaricato il credito di 25 $`);
+  } else if (numBox.value.substring(0, 3) === "119") {
+    SecondUser.unaRicarica(Number(numBox.value.substring(3)));
+
+    alert(`hai ricaricato il credito di ${numBox.value.substring(3)} $`);
+    console.log(SecondUser.numberCarica);
     numBox.value = "";
   } else if (numBox.value === "111") {
     alert(`${SecondUser.getNumeroChiamate()}`);
